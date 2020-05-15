@@ -13183,31 +13183,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Erik\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/erikdombi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+      "projectUniqueName": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
       "projectName": "TVWBAPI",
-      "projectPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
-      "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
-      "outputPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\",
+      "projectPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
+      "packagesPath": "/Users/erikdombi/.nuget/packages/",
+      "outputPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Erik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/erikdombi/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13272,7 +13265,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
       }
     }
   }
