@@ -1,0 +1,16 @@
+[
+  {
+    "AppId": "T3ST",
+    "AppName": "TestingWidget",
+    "CreationDate": "2019-07-05",
+    "CreatedBy": "29a42e89-0a99-4a79-8f6a-ebf4f5f55187",
+    "Verified": false
+  },
+  {
+    "AppID": "00000000-0000-0000-0000-000000000000",
+    "AppName": "Wave",
+    "CreationDate": "2019-07-05",
+    "CreatedBy": "29a42e89-0a99-4a79-8f6a-ebf4f5f55187",
+    "Verified": true
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "Friends": [],
+    "Username": "domberik176",
+    "Password": "torchman",
+    "UUID": "866627a6-82a1-449a-85d8-604388352132",
+    "Tokens": [
+      {
+        "appid": "00000000-0000-0000-0000-000000000000",
+        "token": "5e167802-ade4-444a-a722-2750e8374bc4",
+        "permissions": [
+          "USER_INFO",
+          "USER_TIMETABLE",
+          "USER_GRADES",
+          "USER_ATTENDANCE"
+        ]
+      }
+    ],
+    "StudentInfo": null,
+    "TimetableInfo": {
+      "Terms": [
+        {
+          "Classes": [
+            {
+              "isHomeRoom": true,
+              "ClassCode": "ICS3/4U1-02",
+              "ClassRoom": "C211D.",
+              "Teacher": " Vriesinga",
+              "Period": "1",
+              "Day": "1"
+            },
+            {
+              "isHomeRoom": false,
+              "ClassCode": "MCV4U1-02",
+              "ClassRoom": "B307D.",
+              "Teacher": " Mountain",
+              "Period": "2",
+              "Day": "1"
+            },
+            {
+              "isHomeRoom": false,
+              "ClassCode": "SPH4U1-02",
+              "ClassRoom": "C316D.",
+              "Teacher": " Vriesinga",
+              "Period": "5",
+              "Day": "1"
+            }
+          ],
+          "Semester": "2",
+          "TermValue": "1",
+          "isMultiday": false
+        },
+        {
+          "Classes": [
+            {
+              "isHomeRoom": true,
+              "ClassCode": "ICS3/4U1-02",
+              "ClassRoom": "C211D.",
+              "Teacher": " Vriesinga",
+              "Period": "1",
+              "Day": "1"
+            },
+            {
+              "isHomeRoom": false,
+              "ClassCode": "MCV4U1-02",
+              "ClassRoom": "B307D.",
+              "Teacher": " Mountain",
+              "Period": "2",
+              "Day": "1"
+            },
+            {
+              "isHomeRoom": false,
+              "ClassCode": "SPH4U1-02",
+              "ClassRoom": "C316D.",
+              "Teacher": " Vriesinga",
+              "Period": "5",
+              "Day": "1"
+            }
+          ],
+          "Semester": "2",
+          "TermValue": "2",
+          "isMultiday": false
+        }
+      ],
+      "Classes": [
+        {
+          "isHomeRoom": true,
+          "ClassCode": "ICS3/4U1-02",
+          "ClassRoom": "C211D.",
+          "Teacher": " Vriesinga",
+          "Period": "1",
+          "Day": "1"
+        },
+        {
+          "isHomeRoom": false,
+          "ClassCode": "MCV4U1-02",
+          "ClassRoom": "B307D.",
+          "Teacher": " Mountain",
+          "Period": "2",
+          "Day": "1"
+        },
+        {
+          "isHomeRoom": false,
+          "ClassCode": "SPH4U1-02",
+          "ClassRoom": "C316D.",
+          "Teacher": " Vriesinga",
+          "Period": "5",
+          "Day": "1"
+        },
+        {
+          "isHomeRoom": true,
+          "ClassCode": "ICS3/4U1-02",
+          "ClassRoom": "C211D.",
+          "Teacher": " Vriesinga",
+          "Period": "1",
+          "Day": "1"
+        },
+        {
+          "isHomeRoom": false,
+          "ClassCode": "MCV4U1-02",
+          "ClassRoom": "B307D.",
+          "Teacher": " Mountain",
+          "Period": "2",
+          "Day": "1"
+        },
+        {
+          "isHomeRoom": false,
+          "ClassCode": "SPH4U1-02",
+          "ClassRoom": "C316D.",
+          "Teacher": " Vriesinga",
+          "Period": "5",
+          "Day": "1"
+        }
+      ],
+      "Type": "Source",
+      "CacheDate": "2020-05-01 7:53:16 PM"
+    },
+    "GradesInfo": null,
+    "AttendanceInfo": null
+  }
+]
