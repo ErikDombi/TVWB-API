@@ -15,12 +15,18 @@ namespace TVWBAPI.Controllers
     [Route("/v1/grades/")]
     public class GradesController : Controller
     {
+        public UserManager userManager;
+        List<User> users => userManager.users;
+        public GradesController(UserManager UM)
+        {
+            userManager = UM;
+        }
+
         [EnableCors("Public")]
         [HttpGet]
         public async Task<IActionResult> IndexAsync(string token)
         {
             bool cached = Request.Query.ContainsKey("cached");
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return BadRequest();
@@ -124,7 +130,6 @@ namespace TVWBAPI.Controllers
                     return StatusCode(204);
                 }
                 user.Update(GI);
-                StaticFunctions.SaveUsers(users);
                 return Content(JsonConvert.SerializeObject(GI, Formatting.Indented));
             }
             catch

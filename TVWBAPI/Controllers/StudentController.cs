@@ -15,12 +15,18 @@ namespace TVWBAPI.Controllers
     [Route("/v1/student/")]
     public class StudentOAuthController : Controller
     {
+        public UserManager userManager;
+        List<User> users => userManager.users;
+        public StudentOAuthController(UserManager UM)
+        {
+            userManager = UM;
+        }
+
         [EnableCors("Public")]
         [HttpGet]
         public async Task<IActionResult> IndexAsync(string token)
         {
             bool cached = Request.Query.ContainsKey("cached");
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return BadRequest();
@@ -90,10 +96,11 @@ namespace TVWBAPI.Controllers
                 sti.Grade = htmlDoc.DocumentNode.Descendants("td").FirstOrDefault(t => t.InnerText.Contains("Grade: ")).InnerText.Split(" ").LastOrDefault();
                 sti.LockerNumber = htmlDoc.DocumentNode.Descendants("td").FirstOrDefault(t => t.InnerText.Contains("Locker #: ")).InnerText.Split(" ").LastOrDefault();
                 sti.Email = user.Username + "@gotvdsb.ca";
+                sti.School = htmlDoc.DocumentNode.Descendants("font").FirstOrDefault().InnerText.Trim();
+                Console.WriteLine(htmlDoc.DocumentNode.Descendants("font").FirstOrDefault().InnerText.Trim());
                 sti.Type = "Source";
                 sti.CacheDate = DateTime.Now.ToString();
                 user.Update(sti);
-                StaticFunctions.SaveUsers(users);
                 return Content(JsonConvert.SerializeObject(sti, Formatting.Indented));
             }
             catch
@@ -159,6 +166,8 @@ namespace TVWBAPI.Controllers
             tbi.OEN = htmlDoc.DocumentNode.Descendants("td").FirstOrDefault(t => t.InnerText.Contains("Student#")).InnerText.Split(" ").LastOrDefault();
             tbi.Grade = htmlDoc.DocumentNode.Descendants("td").FirstOrDefault(t => t.InnerText.Contains("Grade: ")).InnerText.Split(" ").LastOrDefault();
             tbi.LockerNumber = htmlDoc.DocumentNode.Descendants("td").FirstOrDefault(t => t.InnerText.Contains("Locker #: ")).InnerText.Split(" ").LastOrDefault();
+            tbi.School = htmlDoc.DocumentNode.Descendants("font").FirstOrDefault().InnerText.Trim();
+            Console.WriteLine(htmlDoc.DocumentNode.Descendants("font").FirstOrDefault().InnerText.Trim());
             tbi.Email = email + "@gotvdsb.ca";
 
             return Json(tbi);

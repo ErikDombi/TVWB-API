@@ -6,19 +6,32 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using TVWBAPI.Controllers;
+using TVWBAPI.TVDSB;
 
 namespace TVWBAPI
 {
     internal class AttendanceUpdaterTask
     {
-        public async static Task Update()
+        private NotificationHandler notificationHandler;
+
+        public UserManager userManager;
+        public Authentication auth;
+        List<User> users => userManager.users;
+
+        public AttendanceUpdaterTask(NotificationHandler nH, UserManager UM, Authentication _auth)
+        {
+            this.notificationHandler = nH;
+            userManager = UM;
+            auth = _auth;
+        }
+
+        public async Task Update()
         {
             await Task.Run(async () =>
             {
-                var users = StaticFunctions.Users;
                 foreach(var user in users)
                 {
-                    var Auth = await TVDSB.Authentication.Authenticate(user.Username, user.Password);
+                    var Auth = await auth.Authenticate(users, user.Username, user.Password);
                     if (Auth.Success)
                     {
                         var htmlDoc = new HtmlDocument();
@@ -52,6 +65,9 @@ namespace TVWBAPI
                         AI.Type = "Source";
                         AI.CacheDate = DateTime.Now.ToString();
 
+                        //TODO: GET THIS INFO IF IT'S NOT AVAILABLE
+                        if (user.AttendanceInfo == null || user.StudentInfo == null)
+                            return;
                         int lateDifferences = int.Parse(AI.Lates) - int.Parse(user.AttendanceInfo.Lates);
                         int absentDifferences = int.Parse(AI.Absents) - int.Parse(user.AttendanceInfo.Absents);
                         if(lateDifferences != 0)
@@ -60,47 +76,43 @@ namespace TVWBAPI
                             {
                                 if(lateDifferences > 0 && absentDifferences > 0)
                                 {
-                                    user.SendNotification($"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} new absent(s)");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} new absence(s)");
                                 }
                                 else if(lateDifferences > 0 && absentDifferences < 0)
                                 {
-                                    user.SendNotification($"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} removed absent(s)");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
                                 }
                                 else if(lateDifferences < 0 && absentDifferences > 0)
                                 {
-                                    user.SendNotification($"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} removed late(s) and {Math.Abs(absentDifferences)} new absent(s)");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has had {Math.Abs(lateDifferences)} late(s) removed and {Math.Abs(absentDifferences)} new absence(s)");
                                 }
                                 else if(lateDifferences < 0 && absentDifferences < 0)
                                 {
-                                    user.SendNotification($"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} removed late(s) and {Math.Abs(absentDifferences)} removed absent(s)");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} removed late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
                                 }
                             }
                             else
                             {
                                 if(lateDifferences < 0)
-                                    user.SendNotification($"{Math.Abs(lateDifferences)} Late(s) has been removed from {user.StudentInfo.FirstName}'s attendance.");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) has been removed from {user.StudentInfo.FirstName}'s attendance.");
                                 else if(lateDifferences > 0)
-                                    user.SendNotification($"{Math.Abs(lateDifferences)} Late(s) have been added to {user.StudentInfo.FirstName}'s attendance.");
+                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) have been added to {user.StudentInfo.FirstName}'s attendance.");
                             }
                         }else if(absentDifferences != 0)
                         {
                             if (absentDifferences < 0)
-                                user.SendNotification($"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been removed from {user.StudentInfo.FirstName}'s attendance.");
+                                user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been removed from {user.StudentInfo.FirstName}'s attendance.");
                             else if (absentDifferences > 0)
-                                user.SendNotification($"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been added to {user.StudentInfo.FirstName}'s attendance.");
+                                user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been added to {user.StudentInfo.FirstName}'s attendance.");
                         }
                         // Don't save users before checking if there is a difference between the new & old
-                        if (AI.Absences.ToList().Count != 0 && AI.Absents.ToList().Count != 0)
+                        if (AI.Absences.ToList().Count > 0 || AI.Absents.ToList().Count > 0)
                             user.Update(AI);
                     }
 
                     //Delay The App by 3 seconds. Abusing TVDSB's site isn't the goal.
                     await Task.Delay(3000);
                 }
-
-                //This is sort of risky. If any part of the user table is updated while this function is running, then it will be overwritten.
-                //This includes running two scheduled tasks at the same time. We need to look into a better way to do this. 
-                StaticFunctions.SaveUsers(users);
             });
         }
     }

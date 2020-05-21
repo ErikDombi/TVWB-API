@@ -3,11 +3,11 @@
     "Friends": [],
     "Username": "domberik176",
     "Password": "torchman",
-    "UUID": "866627a6-82a1-449a-85d8-604388352132",
+    "UUID": "c44551e0-c4bd-4abd-b68d-a064b7c0f86b",
     "Tokens": [
       {
         "appid": "00000000-0000-0000-0000-000000000000",
-        "token": "5e167802-ade4-444a-a722-2750e8374bc4",
+        "token": "1c41a645-95ec-4781-942b-96e39b46f1e5",
         "permissions": [
           "USER_INFO",
           "USER_TIMETABLE",
@@ -16,7 +16,18 @@
         ]
       }
     ],
-    "StudentInfo": null,
+    "StudentInfo": {
+      "FirstName": "Erik",
+      "LastName": "Dombi",
+      "StudentNumber": "362887176",
+      "OEN": "698290780",
+      "Grade": "12",
+      "LockerNumber": "1135",
+      "Email": "domberik176@gotvdsb.ca",
+      "Type": "Source",
+      "CacheDate": "2020-05-20 6:28:25 PM",
+      "School": "Saunders Secondary School"
+    },
     "TimetableInfo": {
       "Terms": [
         {
@@ -133,9 +144,1783 @@
         }
       ],
       "Type": "Source",
-      "CacheDate": "2020-05-01 7:53:16 PM"
+      "CacheDate": "2020-05-20 5:06:20 PM"
     },
-    "GradesInfo": null,
-    "AttendanceInfo": null
+    "GradesInfo": {
+      "Grades": [
+        {
+          "Date": "2020.04.15",
+          "Course": "ICS4U1",
+          "Mark": "100",
+          "Comment": "",
+          "Ind": "",
+          "Team": "",
+          "Org": "",
+          "Homework": "",
+          "Init": ""
+        },
+        {
+          "Date": "2020.04.15",
+          "Course": "MCV4U1",
+          "Mark": "68",
+          "Comment": "",
+          "Ind": "",
+          "Team": "",
+          "Org": "",
+          "Homework": "",
+          "Init": ""
+        },
+        {
+          "Date": "2020.04.15",
+          "Course": "SPH4U1",
+          "Mark": "88",
+          "Comment": "",
+          "Ind": "",
+          "Team": "",
+          "Org": "",
+          "Homework": "",
+          "Init": ""
+        },
+        {
+          "Date": "2020.03.09",
+          "Course": "ICS4U1",
+          "Mark": "100",
+          "Comment": ".",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2020.03.09",
+          "Course": "MCV4U1",
+          "Mark": "65",
+          "Comment": ".",
+          "Ind": "S",
+          "Team": "S",
+          "Org": "S",
+          "Homework": "S",
+          "Init": "S"
+        },
+        {
+          "Date": "2020.03.09",
+          "Course": "SPH4U1",
+          "Mark": "79",
+          "Comment": ".",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2020.01.31",
+          "Course": "ENG4U1",
+          "Mark": "77",
+          "Comment": "Students enrolled in credit-bearing courses are receiving report cards consisting of marks only, as teachers are not able to provide comments due to provincial labour action. Please know that the marks of students applying to post-secondary institutions will still be forwarded to the Ontario College Application Service (OCAS) and the Ontario Universities? Application Centre (OUAC) for application purposes, as applicable.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "G",
+          "Init": "S"
+        },
+        {
+          "Date": "2020.01.31",
+          "Course": "MDM4U1",
+          "Mark": "64",
+          "Comment": ".",
+          "Ind": "S",
+          "Team": "S",
+          "Org": "N",
+          "Homework": "N",
+          "Init": "S"
+        },
+        {
+          "Date": "2020.01.31",
+          "Course": "MHF4U1",
+          "Mark": "63",
+          "Comment": ".",
+          "Ind": "S",
+          "Team": "S",
+          "Org": "S",
+          "Homework": "S",
+          "Init": "S"
+        },
+        {
+          "Date": "2019.11.07",
+          "Course": "ENG4U1",
+          "Mark": "77",
+          "Comment": "Erik has learned to make meaningful connections between texts and various literary criticisms.  He effectively communicates his thoughts, experiences and understanding through writing. He uses context clues to make sense of deeper meanings in texts. In order to expand his writing style, Erik should imitate the voice of proficient writers to absorb new techniques.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2019.11.07",
+          "Course": "MDM4U1",
+          "Mark": "73",
+          "Comment": "Erik has a good overall understanding of the course content to date. He has a moderate understanding of the Characteristics of Data unit and a good understanding of the Introduction to Probability and Analysis of Data unit. He earned 67% on Part 1 of his course project and is encouraged to ask clarification questions when difficulties arise for continued success this semester.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "S",
+          "Homework": "S",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.11.07",
+          "Course": "MHF4U1",
+          "Mark": "76",
+          "Comment": "Erik demonstrates a good understanding of polynomial functions, rates of change and rational functions.  He has strong problem solving skills.  Erik needs to continue to ask questions if he does not understand.  He is encouraged to show more steps in his solutions.",
+          "Ind": "S",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "S",
+          "Init": "S"
+        },
+        {
+          "Date": "2019.10.08",
+          "Course": "ENG4U1",
+          "Mark": "80",
+          "Comment": "This is an early report only. It is based on one assignment, and is not indicative of your child's ability in the course.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.10.08",
+          "Course": "MDM4U1",
+          "Mark": "73",
+          "Comment": "This is an early progress report.  Math Aid is available daily from 11:20 a.m. to 11:50 a.m. in room B304.  Unit outlines, daily completed notes, and upcoming assessments may be found posted on our Google Classroom. Parent/Teacher Interviews take place from 3:30 p.m. to 6:30 p.m. on Thursday, October 10, 2019.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.10.08",
+          "Course": "MHF4U1",
+          "Mark": "73",
+          "Comment": "Keep up the good work Erik!  Parent Teacher interviews are Thurs. Oct. 10 from 3:30 - 6:30.  Please email me at janet.fish@tvdsb.ca if you have any questions.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "BMI3C1",
+          "Mark": "78",
+          "Comment": "It was great teaching Erik this semester in Grade 11 Marketing. Erik is able to effectively communicate concepts related to Marketing through class discussions and group work. Erik needs to use class time more effectively to maximize his learning. Final Exam = 73%. It is recommended that Eric sign up for the BBB and BDV courses.",
+          "Ind": "G",
+          "Team": "E",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "ENG3U1",
+          "Mark": "71",
+          "Comment": "Erik was a pleasure to have in class this semester. He has successfully achieved all of the expectations for Grade 11 University English. Greater attention to proofreading and detail will help improve his skills in English. Erik should proceed into Grade 12 University English. All the best!",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "ICS3U1",
+          "Mark": "82",
+          "Comment": "Erik has a coding skill above the expectations presented in this course and every assignment he hands is perfectly done. However to have success in the future and reach his capabilities he will need to become more responsible about completing all assigned work and focusing on what needs to be done in class.",
+          "Ind": "E",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "MCR3U1",
+          "Mark": "73",
+          "Comment": "In this course, we have studied Rational Variable Expressions, Quadratic Functions, Transformations of Functions, Exponential Functions, Trig Functions and Applications, Sequences and Series, and Financial Applications.  Erik demonstrated a moderate understanding of these concepts on his final exam (68%). Recommend MHF4U1 and/or MDM4U1.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "S",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "SCH3U1",
+          "Mark": "58",
+          "Comment": "Erik demonstrated a good ability to solve for stoichiometric quantities but he achieved below his potential due to inconsistent work habits.  He routinely did not complete his homework and he did not prepare for tests and final evaluations effectively.  Erik would benefit from using his class time effectively and coming in for extra help.  A more dedicated effort is required for Erik to achieve at a level that better reflects his ability.",
+          "Ind": "N",
+          "Team": "S",
+          "Org": "S",
+          "Homework": "S",
+          "Init": "N"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "SPH3U1",
+          "Mark": "72",
+          "Comment": "Erik has demonstrated good technical skills and improved problem solving throughout the semester. I recommend that Erik ask more questions when working on concept attainment and mastering material. Erik is encouraged to continue with his work with media and presentations.",
+          "Ind": "G",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "G"
+        },
+        {
+          "Date": "2019.06.28",
+          "Course": "TCE3E2",
+          "Mark": "77",
+          "Comment": "Erik displays the understanding of residential electrical wiring and theory, including branch circuits, print layouts and building circuit. He transferred concepts, skills, and procedures in our relay unit, with a high degree of effectiveness. He completed his ISP with the correct use of procedures, equipment, and technology and did well on his exam. Erik is encouraged to be more consistent in class efforts going into next year. Have a great summer Erik!",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "S",
+          "Init": "S"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "CGF3M1",
+          "Mark": "81",
+          "Comment": "Erik has a good understanding of geographical concepts. Erik was able to use class time wisely.  His work was always completed.  He needs to work on test preparation. He was a positive member of the class. Keep geography in your future plans.",
+          "Ind": "G",
+          "Team": "E",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "CHC2D1",
+          "Mark": "74",
+          "Comment": "Erik's performance in the course was very good.  Erik achieved a mark of 78% on the exam.  Erik has improved his critical thinking skills, in selecting and interpret relevant evidence in order to make sound decisions.  Erik worked very hard to improve his performance and her understanding of facts, issues and events in History.  He should consider taking Senior History courses in the future.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "ENG2D1",
+          "Mark": "69",
+          "Comment": "Erik seems to have an understanding of our introduction to archetypes, the use of imagery and persuasive techniques, and story analysis.  His distracted class attention means we don't get to see the nuances of his responses, or see him apply them of his own initiative.  He struggled seriously on the independent work of the final exam.  I encourage Erik to focus on staying caught up with classwork by arranging a homework partner.  Good work.",
+          "Ind": "G",
+          "Team": "S",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "ICS2O1",
+          "Mark": "92",
+          "Comment": "Erik's skills in computer programming are well beyond what is offered in this class. I look forward in the future to seeing what he is capable of in the ICS3U University level computer programming course. Nice work this semester Erik.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "MPM2D1",
+          "Mark": "75",
+          "Comment": "In this course we have studied Analytic Geometry, Linear Systems, Algebra, Quadratic Relations, and Trigonometry.  Erik demonstrated a good understanding of the concepts. He scored 74% on the final exam.  Recommend MCR3U1 (Grade 11 University).",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "E"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "PPL2OM",
+          "Mark": "85",
+          "Comment": "Erik actively participates and performs movement skills with a good degree of competence and initiative. He demonstrates excellent knowledge and understanding in written test/assignments and a pleasant attitude has been shown. Good luck next semester.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "SNC2D1",
+          "Mark": "74",
+          "Comment": "Erik's science class focused on Light and Optics, Tissues and Biological Systems, Chemical Reactions and Climate Change.  Erik demonstrated a good understanding of these concepts but he would benefit from paying more attention in class.  Erik did well on his final exam (74%) but he would benefit from submitting his assignments in a timely manner.",
+          "Ind": "S",
+          "Team": "G",
+          "Org": "S",
+          "Homework": "S",
+          "Init": "S"
+        },
+        {
+          "Date": "2018.06.29",
+          "Course": "TEJ2O1",
+          "Mark": "60",
+          "Comment": "In computer engineering, we have learned about computer hardware, software, workstation set-up/maintenance, basic electronics and computer interfacing, coding in Python and networking.  Erik is an intelligent student who performed well on tests and the final exam. Erik could have achieved a better mark if he had completed all assigned work. I encourage Erik to continue his computer engineering studies into grade 11 (TEJ3M). Have a great summer Erik.",
+          "Ind": "S",
+          "Team": "G",
+          "Org": "S",
+          "Homework": "G",
+          "Init": "S"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "AVI1O1",
+          "Mark": "79",
+          "Comment": "Erik has been developing his drawing skills over the course of this semester and has a good understanding of composition and the elements and principles of design.  Erik created some good work in this course but often struggled with due dates.  Attention in this area will ensure greater success next year.  Congratulations on the completion of AVI1O1!",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "BBI1O5",
+          "Mark": "86",
+          "Comment": "Erik has successfully achieved the BBI credit this term. Erik effectively communicates during class discussions and group work. Erik prepares well for all evaluations. Erik could use class time more effectively to complete detailed term work. Final Exam = 84%. It is recommended that Erik sign up for future Business and Computer Studies courses.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "BTT1O5",
+          "Mark": "87",
+          "Comment": "Erik has successfully achieved the BTT credit this term. Erik effectively communicates ideas about  the Role of Business such as Business Ownership and Franchises. Erik needs to take more time to complete Computer Application assignments and ask questions when needing clarification. Exam = 100%. Good luck in Term 2.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "CGC1D1",
+          "Mark": "78",
+          "Comment": "Erik did a better job of ensuring that his work was complete.  He has a good attitude towards geography and school in general. He should take the grade 11 Physical geography course next.",
+          "Ind": "G",
+          "Team": "E",
+          "Org": "G",
+          "Homework": "E",
+          "Init": "G"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "CHV2O5",
+          "Mark": "81",
+          "Comment": "",
+          "Ind": "",
+          "Team": "",
+          "Org": "",
+          "Homework": "",
+          "Init": ""
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "ENG1D1",
+          "Mark": "70",
+          "Comment": "Erik studied a wide variety of texts throughout the semester and he learned new writing skills, such as how to organize and format his writing effectively. He demonstrates good reading comprehension and he should continue to make an effort to participate in class discussions. Erik should spend more time editing his writing to ensure he submits his best work for evaluation.",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "S"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "FSF1P1",
+          "Mark": "79",
+          "Comment": "Erik has achieved a good understanding of the course concepts this semester in French. He is able to use new vocabulary and grammar concepts to communicate. I do not believe that Erik's final mark is a true reflection of his abilities. Erik is encouraged to work on his organizational skills and take opportunities to make up for missed work. Erik has so much potential when he commits to his academic achievement. Best of luck in your courses next semester!",
+          "Ind": "G",
+          "Team": "G",
+          "Org": "G",
+          "Homework": "G",
+          "Init": "G"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "GLC2O5",
+          "Mark": "88",
+          "Comment": "",
+          "Ind": "",
+          "Team": "",
+          "Org": "",
+          "Homework": "",
+          "Init": ""
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "MPM1DE",
+          "Mark": "77",
+          "Comment": "Erik demonstrated a very good understanding of Linear Relations and a good understanding of Analytic Geometry, Measurement and Geometry. Eric is encouraged to complete all assigned work and ask questions when needed.  Recommend grade 10 academic math (MPM 2D1).",
+          "Ind": "G",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "S",
+          "Init": "E"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "SNC1D1",
+          "Mark": "80",
+          "Comment": "Erik shows a strong ability to connect concepts. Erik is encouraged to continue to ask questions and to participate in classroom conversations. I recommend that he continue on with academic science.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        },
+        {
+          "Date": "2017.06.30",
+          "Course": "TIJ1OB",
+          "Mark": "91",
+          "Comment": "Erik has completed 5 sections of Grade 9 Technology,  his marks are as follows; Transportation with J.Costa 80%, Tech. Design with S.Merklinger 100%, Manufacturing  with M. Gerrits 93%, Construction with G.Vargyas 97% and Comm. Tech with R.Burnell  79%.  If you have questions or concerns, please contact the appropriate teacher at 519-452-2770.",
+          "Ind": "E",
+          "Team": "E",
+          "Org": "E",
+          "Homework": "E",
+          "Init": "E"
+        }
+      ],
+      "Type": "Source",
+      "CacheDate": "2020-05-20 5:06:56 PM"
+    },
+    "AttendanceInfo": {
+      "Absences": [
+        {
+          "Date": "5/29/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/29/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/29/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/28/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/28/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/28/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/27/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/27/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/27/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/26/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/26/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/26/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/25/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/25/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/25/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/22/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/22/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/22/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/21/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/21/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/21/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/20/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/20/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/20/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/19/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/19/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/19/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/15/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/15/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/15/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/14/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/14/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/14/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/13/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/13/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/13/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/12/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/12/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/12/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/11/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/11/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/11/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/8/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/8/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/8/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/7/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/7/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/7/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/6/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/6/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/6/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/5/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/5/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/5/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/4/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/4/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/4/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/1/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/1/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "5/1/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/30/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/30/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/30/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/29/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/29/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/29/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/28/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/28/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/28/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/23/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/23/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/23/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/22/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/22/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/22/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/21/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/21/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/21/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/20/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/20/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/20/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/17/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/17/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/17/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/16/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/16/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/16/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/15/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/15/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/15/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/14/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/14/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/14/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/9/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/9/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/9/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/8/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/8/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/8/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/7/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/7/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/7/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/6/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/6/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/6/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/3/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/3/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/3/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/2/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/2/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/2/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/1/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/1/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "4/1/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/31/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/31/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/31/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/30/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/30/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/30/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/27/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/27/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/27/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/26/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/26/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/26/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/25/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/25/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/25/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/24/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/24/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/24/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/23/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/23/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/23/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "3/10/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "3/5/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "A",
+          "Reason": "all day-call/email rec'd-cs Illness/Injury"
+        },
+        {
+          "Date": "2/24/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "A",
+          "Reason": "p1/2-call/email received-eh Appointment Not Specific"
+        },
+        {
+          "Date": "2/24/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "A",
+          "Reason": "p1/2-call/email received-eh Appointment Not Specific"
+        },
+        {
+          "Date": "2/21/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "2/21/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "2/21/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "2/4/2020",
+          "Period": "5",
+          "Class": "SPH4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "2/4/2020",
+          "Period": "2",
+          "Class": "MCV4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "2/4/2020",
+          "Period": "1",
+          "Class": "ICS3/4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "1/23/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "1/22/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "1/20/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "1/13/2020",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": "226-224-9559 NOT on contact list-eh"
+        },
+        {
+          "Date": "1/8/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "1/7/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "1/6/2020",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/20/2019",
+          "Period": "H",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/20/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": ""
+        },
+        {
+          "Date": "12/19/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/18/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/18/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/18/2019",
+          "Period": "2",
+          "Class": "MHF4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/17/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/16/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/13/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/11/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/10/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/9/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/5/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/4/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/4/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/4/2019",
+          "Period": "2",
+          "Class": "MHF4U1-02",
+          "Code": "G",
+          "Reason": "all day-OSSTF job action-cs School Closure/Services Withdrawal"
+        },
+        {
+          "Date": "12/3/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "12/2/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "A",
+          "Reason": ""
+        },
+        {
+          "Date": "11/29/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "11/27/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": ""
+        },
+        {
+          "Date": "11/27/2019",
+          "Period": "2",
+          "Class": "MHF4U1-02",
+          "Code": "A",
+          "Reason": ""
+        },
+        {
+          "Date": "11/26/2019",
+          "Period": "2",
+          "Class": "MHF4U1-02",
+          "Code": "A",
+          "Reason": "all day-call/email received-eh Illness/Injury"
+        },
+        {
+          "Date": "11/26/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": "all day-call/email received-eh Illness/Injury"
+        },
+        {
+          "Date": "11/26/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "A",
+          "Reason": "all day-call/email received-eh Illness/Injury"
+        },
+        {
+          "Date": "11/22/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "11/20/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "11/4/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "10/31/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "10/28/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "10/23/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "10/23/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": ""
+        },
+        {
+          "Date": "10/17/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "9/25/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "A",
+          "Reason": "p5-call/email rec'd-cs Illness/Injury"
+        },
+        {
+          "Date": "9/24/2019",
+          "Period": "1",
+          "Class": "MDM4U1-01",
+          "Code": "L",
+          "Reason": ""
+        },
+        {
+          "Date": "9/18/2019",
+          "Period": "5",
+          "Class": "ENG4U1-03",
+          "Code": "G",
+          "Reason": "p5-due to school evacuation-eh School Closure/Services Withdrawal"
+        }
+      ],
+      "Absents": "13",
+      "Lates": "26",
+      "Type": "Source",
+      "CacheDate": "2020-05-20 7:04:52 PM"
+    },
+    "APNSToken": null,
+    "ShareTimetable": false
   }
 ]

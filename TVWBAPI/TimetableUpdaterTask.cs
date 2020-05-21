@@ -7,7 +7,7 @@ namespace TVWBAPI
 {
     public class TimetableUpdaterTask
     {
-        public async static Task Update()
+        public async static Task Update(NotificationHandler notificationHandler)
         {
             await Task.Run(() =>
             {

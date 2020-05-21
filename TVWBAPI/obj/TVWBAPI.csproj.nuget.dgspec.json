@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {}
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {}
   },
   "projects": {
-    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
+        "projectUniqueName": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
         "projectName": "TVWBAPI",
-        "projectPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
-        "packagesPath": "/Users/erikdombi/.nuget/packages/",
-        "outputPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/obj/",
+        "projectPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+        "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
+        "outputPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/erikdombi/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Erik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,6 +42,10 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AspNetCore.RouteAnalyzer": {
+              "target": "Package",
+              "version": "[0.5.3, )"
+            },
             "HangFire": {
               "target": "Package",
               "version": "[1.7.7, )"
@@ -72,6 +82,22 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
+            },
+            "PushSharp": {
+              "target": "Package",
+              "version": "[4.0.10, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [
@@ -84,7 +110,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

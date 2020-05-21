@@ -13,6 +13,13 @@ namespace TVWBAPI.Controllers
     [Route("/v1/oauth/")]
     public class OAuthController : Controller
     {
+        public UserManager userManager;
+        List<User> users => userManager.users;
+        public OAuthController(UserManager UM)
+        {
+            userManager = UM;
+        }
+
         [EnableCors("Private")]
         [HttpPatch]
         public IActionResult Index(string token, string permissions)
@@ -20,7 +27,6 @@ namespace TVWBAPI.Controllers
             bool cached = Request.Query.ContainsKey("cached");
             if (string.IsNullOrWhiteSpace(token) || string.IsNullOrWhiteSpace(permissions))
                 return BadRequest();
-            List<User> users = StaticFunctions.Users;
             users.FirstOrDefault(t => t.Tokens.Any(c => c.token == token)).Tokens.FirstOrDefault(t => t.token == token).permissions.Clear();
             if (permissions[0] == '1')
                 users.FirstOrDefault(t => t.Tokens.Any(c => c.token == token)).Tokens.FirstOrDefault(t => t.token == token).permissions.Add("USER_INFO");
@@ -30,7 +36,6 @@ namespace TVWBAPI.Controllers
                 users.FirstOrDefault(t => t.Tokens.Any(c => c.token == token)).Tokens.FirstOrDefault(t => t.token == token).permissions.Add("USER_TIMETABLE");
             if (permissions[3] == '1')
                 users.FirstOrDefault(t => t.Tokens.Any(c => c.token == token)).Tokens.FirstOrDefault(t => t.token == token).permissions.Add("USER_ATTENDANCE");
-            StaticFunctions.SaveUsers(users);
             return Ok();
         }
 
@@ -39,7 +44,6 @@ namespace TVWBAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(string token)
         {
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return BadRequest();
@@ -65,7 +69,7 @@ namespace TVWBAPI.Controllers
 
         [EnableCors("Public")]
         [HttpPost]
-        public async Task<IActionResult> Index(string username, string password, string appid)
+        public async Task<IActionResult> Index(string username, string password, string appid, string apnstoken)
         {
             bool cached = Request.Query.ContainsKey("cached");
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(appid))
@@ -91,12 +95,14 @@ namespace TVWBAPI.Controllers
                             return Unauthorized();
                     }
                 }
-                List<User> users = StaticFunctions.Users;
                 var user = users.FirstOrDefault(t => t.Username == username);
                 if (user != null)
+                {
                     if (user.Password != password)
                         user.Password = password;
-                StaticFunctions.SaveUsers(users);
+                    if (user.APNSToken != apnstoken)
+                        user.APNSToken = apnstoken;
+                }
                 try
                 {
                     if (users.FirstOrDefault(t => t.Username == username).Tokens.Any(t => t.appid == appid))
@@ -106,7 +112,6 @@ namespace TVWBAPI.Controllers
                         Guid tmpGuid = Guid.NewGuid();
                         users.FirstOrDefault(t => t.Username == username).Tokens.Add(new Token() { appid = appid, token = tmpGuid.ToString(), permissions = (app.CreatedBy.ToString() == "00000000-0000-0000-0000-000000000000" ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) });
                         var usrrr = users.FirstOrDefault(t => t.Username == username);
-                        StaticFunctions.SaveUsers(users);
                         Console.WriteLine("[USER CREATED] Created User:");
                         Console.WriteLine(" - " + usrrr.Username);
                         Console.WriteLine(" - " + usrrr.Password);
@@ -119,7 +124,7 @@ namespace TVWBAPI.Controllers
                 catch { }
 
                 Guid guid = Guid.NewGuid();
-                User usr = new User() { Username = username, Tokens = new List<Token>() { new Token() { appid = appid, token = guid.ToString(), permissions = (app.Verified ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) } }, Password = password, UUID = Guid.NewGuid() };
+                User usr = new User() { Username = username, Tokens = new List<Token>() { new Token() { appid = appid, token = guid.ToString(), permissions = (app.Verified ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) } }, Password = password, UUID = Guid.NewGuid(), APNSToken = apnstoken };
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("[USER CREATED] Created User:");
                 Console.WriteLine(" - " + usr.Username);
@@ -127,24 +132,24 @@ namespace TVWBAPI.Controllers
                 Console.WriteLine(" - " + string.Join(", ", usr.Tokens.FirstOrDefault(t => t.appid == appid).permissions));
                 Console.ForegroundColor = ConsoleColor.Gray;
                 users.Add(usr);
-                StaticFunctions.SaveUsers(users);
                 return Ok(guid.ToString());
             }
             else
             {
-                List<User> users = StaticFunctions.Users;
                 var user = users.FirstOrDefault(t => t.Username == username);
                 if (user != null)
                     if (user.Password == password)
+                        users.FirstOrDefault(t => t.Username == username).APNSToken = apnstoken;
                         try
                         {
                             if (users.FirstOrDefault(t => t.Username == username).Tokens.Any(t => t.appid == appid))
+                            {
                                 return Ok(users.FirstOrDefault(t => t.Username == username).Tokens.FirstOrDefault(t => t.appid == appid).token);
+                            }
                             else
                             {
                                 Guid tmpGuid = Guid.NewGuid();
                                 users.FirstOrDefault(t => t.Username == username).Tokens.Add(new Token() { appid = appid, token = tmpGuid.ToString(), permissions = (app.Verified ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) });
-                                StaticFunctions.SaveUsers(users);
                                 return Ok(tmpGuid);
                             }
                         }
@@ -181,6 +186,8 @@ namespace TVWBAPI.Controllers
         public GradesInfo GradesInfo { get; set; }
         public AttendanceInfo AttendanceInfo { get; set; }
         public List<string> Friends = new List<string>();
+        public string APNSToken { get; set; }
+        public bool ShareTimetable { get; set; } = false;
 
         public void Update(StudentInfo info)
         {
@@ -198,9 +205,36 @@ namespace TVWBAPI.Controllers
         {
             AttendanceInfo = info;
         }
-        public void SendNotification(string Message)
+        public void SendNotification(NotificationHandler notificationHandler, string Title, string Message)
         {
-            Console.WriteLine($"[{this.StudentInfo.FirstName}] {Message}");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            if (!string.IsNullOrWhiteSpace(APNSToken))
+                notificationHandler.sendAlert(APNSToken, Title, "", Message, "Attendance");
+            Console.WriteLine($"{{{this.Username}}} : [{Title}] {Message}");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
+
+        public PublicUser PublicProfile()
+        {
+            return new PublicUser()
+            {
+                Username = this.Username,
+                UUID = this.UUID,
+                Grade = this.StudentInfo.Grade,
+                FirstName = this.StudentInfo.FirstName,
+                LastName = this.StudentInfo.LastName,
+                School = this.StudentInfo.School,
+            };
+        }
+    }
+
+    public class PublicUser
+    {
+        public string Username { get; set; }
+        public Guid UUID { get; set; }
+        public string Grade;
+        public string FirstName;
+        public string LastName;
+        public string School;
     }
 }

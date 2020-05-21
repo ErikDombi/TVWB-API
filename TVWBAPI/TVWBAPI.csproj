@@ -11,6 +11,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="AuthKey.p12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AuthKey.p12">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -22,13 +32,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.RouteAnalyzer" Version="0.5.3" />
     <PackageReference Include="HangFire" Version="1.7.7" />
     <PackageReference Include="Hangfire.Storage.SQLite" Version="0.1.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.8" />
+    <PackageReference Include="jose-jwt" Version="2.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="PushSharp" Version="4.0.10" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>C:\Users\Erik\Desktop\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

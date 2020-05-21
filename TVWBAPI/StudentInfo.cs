@@ -14,6 +14,7 @@ namespace TVWBAPI.Controllers
         public string Email { get; set; }
         public string Type { get; set; }
         public string CacheDate { get; set; }
+        public string School { get; set; }
 
         public StudentInfo AsCached()
         {

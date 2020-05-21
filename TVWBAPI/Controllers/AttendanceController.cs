@@ -14,12 +14,18 @@ namespace TVWBAPI.Controllers
     [Route("/v1/attendance/")]
     public class AttendanceController : Controller
     {
+        public UserManager userManager;
+        List<User> users => userManager.users;
+        public AttendanceController(UserManager UM)
+        {
+            userManager = UM;
+        }
+
         [HttpGet]
         public async Task<IActionResult> IndexAsync(string token)
         {
             int[] Scores = new int[4];
             bool cached = Request.Query.ContainsKey("cached");
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return BadRequest();
@@ -112,7 +118,6 @@ namespace TVWBAPI.Controllers
                     return StatusCode(204);
                 }
                 user.Update(AI);
-                StaticFunctions.SaveUsers(users);
                 return Content(JsonConvert.SerializeObject(AI, Formatting.Indented));
             }
             catch

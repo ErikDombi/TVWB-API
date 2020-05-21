@@ -46,3 +46,6 @@ D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\obj\Debug\netcore
 D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\obj\Debug\netcoreapp2.1\TVWBAPI.RazorTargetAssemblyInfo.cache
 D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\obj\Debug\netcoreapp2.1\TVWBAPI.dll
 D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\obj\Debug\netcoreapp2.1\TVWBAPI.pdb
+D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\bin\Debug\netcoreapp2.1\BouncyCastle.Crypto.dll
+D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\obj\Debug\netcoreapp2.1\TVWBAPI.csproj.CopyComplete
+D:\Windows.old.001.bak\Users\Erik\source\repos\TVWBAPI\TVWBAPI\bin\Debug\netcoreapp2.1\AuthKey.p12

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {}
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {}
   },
   "projects": {
-    "C:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+        "projectUniqueName": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
         "projectName": "TVWBAPI",
-        "projectPath": "C:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+        "projectPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
         "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
-        "outputPath": "C:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\publish\\linux-x64\\",
+        "outputPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\publish\\linux-x64\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AspNetCore.RouteAnalyzer": {
+              "target": "Package",
+              "version": "[0.5.3, )"
+            },
             "HangFire": {
               "target": "Package",
               "version": "[1.7.7, )"
@@ -78,6 +82,22 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.2, )"
+            },
+            "PushSharp": {
+              "target": "Package",
+              "version": "[4.0.10, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "jose-jwt": {
+              "target": "Package",
+              "version": "[2.5.0, )"
             }
           },
           "imports": [

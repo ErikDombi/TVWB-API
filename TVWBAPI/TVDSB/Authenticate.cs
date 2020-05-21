@@ -11,7 +11,18 @@ namespace TVWBAPI.TVDSB
 {
     public class Authentication
     {
-        public async static Task<bool> Authenticate(string username, string password, string appid)
+        public UserManager userManager;
+        //List<User> users => userManager.users;
+        public Authentication()
+        {
+
+        }
+        public Authentication(UserManager UM)
+        {
+            userManager = UM;
+        }
+
+        public async Task<bool> Authenticate(List<User> users, string username, string password, string appid)
         {
             username = username.ToLower().Trim();
             List<App> Apps = StaticFunctions.Apps;
@@ -32,12 +43,10 @@ namespace TVWBAPI.TVDSB
                         return false;
                 }
             }
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Username == username);
             if (user != null)
                 if (user.Password != password)
                     user.Password = password;
-            StaticFunctions.SaveUsers(users);
             try
             {
                 if (users.FirstOrDefault(t => t.Username == username).Tokens.Any(t => t.appid == appid))
@@ -46,7 +55,6 @@ namespace TVWBAPI.TVDSB
                 {
                     Guid tmpGuid = Guid.NewGuid();
                     users.FirstOrDefault(t => t.Username == username).Tokens.Add(new Token() { appid = appid, token = tmpGuid.ToString(), permissions = (app.CreatedBy.ToString() == "00000000-0000-0000-0000-000000000000" ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) });
-                    StaticFunctions.SaveUsers(users);
                     return true;
                 }
 
@@ -56,7 +64,6 @@ namespace TVWBAPI.TVDSB
             Guid guid = Guid.NewGuid();
             User usr = new User() { Username = username, Tokens = new List<Token>() { new Token() { appid = appid, token = guid.ToString(), permissions = (app.CreatedBy.ToString() == "00000000-0000-0000-0000-000000000000" ? new List<string> { "USER_INFO", "USER_TIMETABLE", "USER_GRADES", "USER_ATTENDANCE" } : new List<string>()) } }, Password = password, UUID = Guid.NewGuid() };
             users.Add(usr);
-            StaticFunctions.SaveUsers(users);
             return true;
         }
 
@@ -81,7 +88,7 @@ namespace TVWBAPI.TVDSB
             }
         }
 
-        public async static Task<AuthResponse> Authenticate(string username, string password)
+        public async Task<AuthResponse> Authenticate(List<User> users, string username, string password)
         {
             username = username.ToLower().Trim();
             var htmlDoc = new HtmlDocument();
@@ -112,7 +119,6 @@ namespace TVWBAPI.TVDSB
             }
             Cookie Cookie = Cookies.FirstOrDefault();
 
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Username == username);
             if (user != null)
                 if (user.Password != password)

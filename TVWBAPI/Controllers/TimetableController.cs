@@ -15,12 +15,18 @@ namespace TVWBAPI.Controllers
     [Route("/v1/timetable/")]
     public class TimetableController : Controller
     {
+        public UserManager userManager;
+        List<User> users => userManager.users;
+        public TimetableController(UserManager UM)
+        {
+            userManager = UM;
+        }
+
         [EnableCors("Public")]
         [HttpGet]
         public async Task<IActionResult> IndexAsync(string token)
         {
             bool cached = Request.Query.ContainsKey("cached");
-            List<User> users = StaticFunctions.Users;
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return BadRequest();
@@ -133,7 +139,6 @@ namespace TVWBAPI.Controllers
                 TI.Type = "Source";
                 TI.CacheDate = DateTime.Now.ToString();
                 user.Update(TI);
-                StaticFunctions.SaveUsers(users);
                 return Content(JsonConvert.SerializeObject(TI, Formatting.Indented));
             }
             catch
