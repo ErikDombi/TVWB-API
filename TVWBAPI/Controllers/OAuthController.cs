@@ -193,6 +193,8 @@ namespace TVWBAPI.Controllers
         public List<string> PendingIncomingFriendRequest = new List<string>();
         public List<string> PendingOutgoingFriendRequest = new List<string>();
 
+        public string ProfilePictureUrl { get; set; }
+
         public string APNSToken { get; set; }
         public bool ShareTimetable { get; set; } = false;
 
@@ -238,6 +240,7 @@ namespace TVWBAPI.Controllers
             pubUser.isFriends = Friends.Contains(sender.UUID.ToString());
             pubUser.isPending = PendingIncomingFriendRequest.Contains(sender.UUID.ToString());
             pubUser.incomingFriendRequest = PendingOutgoingFriendRequest.Contains(sender.UUID.ToString());
+            pubUser.isSelf = pubUser.UUID == sender.UUID;
             return pubUser;
         }
 
@@ -250,7 +253,8 @@ namespace TVWBAPI.Controllers
                 Grade = this.StudentInfo.Grade,
                 FirstName = this.StudentInfo.FirstName,
                 LastName = this.StudentInfo.LastName,
-                School = this.StudentInfo.School
+                School = this.StudentInfo.School,
+                ProfilePictureUrl = ProfilePictureUrl
             };
         }
     }
@@ -266,5 +270,7 @@ namespace TVWBAPI.Controllers
         public bool isFriends;
         public bool isPending;
         public bool incomingFriendRequest;
+        public bool isSelf;
+        public string ProfilePictureUrl;
     }
 }
