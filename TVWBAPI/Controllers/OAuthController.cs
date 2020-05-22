@@ -234,6 +234,24 @@ namespace TVWBAPI.Controllers
             PendingIncomingFriendRequest.Add(Sender.UUID.ToString()); 
         }
 
+        public SelfUser SelfUser()
+        {
+            return new SelfUser()
+            {
+                Username = this.Username,
+                UUID = this.UUID,
+                StudentInfo = this.StudentInfo,
+                TimetableInfo = this.TimetableInfo,
+                AttendanceInfo = this.AttendanceInfo,
+                GradesInfo = this.GradesInfo,
+                Friends = this.Friends,
+                PendingIncomingFriendRequest = this.PendingIncomingFriendRequest,
+                PendingOutgoingFriendRequest = this.PendingOutgoingFriendRequest,
+                ProfilePictureUrl = this.ProfilePictureUrl,
+                ShareTimetable = this.ShareTimetable
+            };
+        }
+
         public PublicUser PublicProfile(User sender)
         {
             var pubUser = PublicProfile();
@@ -257,6 +275,24 @@ namespace TVWBAPI.Controllers
                 ProfilePictureUrl = ProfilePictureUrl
             };
         }
+    }
+
+    public class SelfUser
+    {
+        public string Username { get; set; }
+        public Guid UUID { get; set; }
+        public StudentInfo StudentInfo { get; set; }
+        public TimetableInfo TimetableInfo { get; set; }
+        public GradesInfo GradesInfo { get; set; }
+        public AttendanceInfo AttendanceInfo { get; set; }
+
+        public List<string> Friends = new List<string>();
+        public List<string> PendingIncomingFriendRequest = new List<string>();
+        public List<string> PendingOutgoingFriendRequest = new List<string>();
+
+        public string ProfilePictureUrl { get; set; }
+
+        public bool ShareTimetable { get; set; } = false;
     }
 
     public class PublicUser

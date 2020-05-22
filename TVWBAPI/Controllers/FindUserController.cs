@@ -43,5 +43,14 @@ namespace TVWBAPI.Controllers
                 return Unauthorized();
             return Content(JsonConvert.SerializeObject(users.Where(t => t.Username.ToLower().Contains(Username)).Select(c => c.PublicProfile(user))));
         }
+
+        [Route("/FindUser/ByToken/")]
+        public IActionResult ByToken(string token)
+        {
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return Unauthorized();
+            return Content(JsonConvert.SerializeObject(user.SelfUser()));
+        }
     }
 }
