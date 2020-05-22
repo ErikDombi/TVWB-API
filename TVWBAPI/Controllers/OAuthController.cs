@@ -177,6 +177,9 @@ namespace TVWBAPI.Controllers
 
     public class User
     {
+        [JsonIgnore]
+        public NotificationHandler notificationHandler;
+
         public string Username { get; set; }
         public string Password { get; set; }
         public Guid UUID { get; set; }
@@ -185,7 +188,11 @@ namespace TVWBAPI.Controllers
         public TimetableInfo TimetableInfo { get; set; }
         public GradesInfo GradesInfo { get; set; }
         public AttendanceInfo AttendanceInfo { get; set; }
+
         public List<string> Friends = new List<string>();
+        public List<string> PendingIncomingFriendRequest = new List<string>();
+        public List<string> PendingOutgoingFriendRequest = new List<string>();
+
         public string APNSToken { get; set; }
         public bool ShareTimetable { get; set; } = false;
 
@@ -205,13 +212,33 @@ namespace TVWBAPI.Controllers
         {
             AttendanceInfo = info;
         }
-        public void SendNotification(NotificationHandler notificationHandler, string Title, string Message)
+        public void SendNotification(string Title, string Message)
+        {
+            SendNotification(Title, "", Message);
+        }
+
+        public void SendNotification(string Title, string Subtitle, string Message)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             if (!string.IsNullOrWhiteSpace(APNSToken))
                 notificationHandler.sendAlert(APNSToken, Title, "", Message, "Attendance");
             Console.WriteLine($"{{{this.Username}}} : [{Title}] {Message}");
             Console.ForegroundColor = ConsoleColor.Gray;
+        }
+
+        public void AddUser(User Sender)
+        {
+            SendNotification("Friend Request Recieved", $"{Sender.StudentInfo.FirstName} {Sender.StudentInfo.LastName} sent you a friend request");
+            PendingIncomingFriendRequest.Add(Sender.UUID.ToString()); 
+        }
+
+        public PublicUser PublicProfile(User sender)
+        {
+            var pubUser = PublicProfile();
+            pubUser.isFriends = Friends.Contains(sender.UUID.ToString());
+            pubUser.isPending = PendingIncomingFriendRequest.Contains(sender.UUID.ToString());
+            pubUser.incomingFriendRequest = PendingOutgoingFriendRequest.Contains(sender.UUID.ToString());
+            return pubUser;
         }
 
         public PublicUser PublicProfile()
@@ -223,7 +250,7 @@ namespace TVWBAPI.Controllers
                 Grade = this.StudentInfo.Grade,
                 FirstName = this.StudentInfo.FirstName,
                 LastName = this.StudentInfo.LastName,
-                School = this.StudentInfo.School,
+                School = this.StudentInfo.School
             };
         }
     }
@@ -236,5 +263,8 @@ namespace TVWBAPI.Controllers
         public string FirstName;
         public string LastName;
         public string School;
+        public bool isFriends;
+        public bool isPending;
+        public bool incomingFriendRequest;
     }
 }

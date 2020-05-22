@@ -59,7 +59,8 @@ namespace TVWBAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime applicationLifetime, NotificationHandler NH, UserManager UM, Authentication Auth)
         {
-            Auth = new Authentication(UM);
+            UM.init(NH); // Set up user Handler
+            Auth = new Authentication(UM); // Set up authenticator
             pubUM = UM;
             applicationLifetime.ApplicationStarted.Register(OnShutDown);
             AUT = new AttendanceUpdaterTask(NH, UM, Auth);

@@ -9,9 +9,13 @@ namespace TVWBAPI
     public class UserManager
     {
         public List<User> users;
-        public UserManager()
+        public void init(NotificationHandler notificationHandler)
         {
             Load();
+            foreach(var usr in users)
+            {
+                usr.notificationHandler = notificationHandler;
+            }
         }
 
         public void Load()

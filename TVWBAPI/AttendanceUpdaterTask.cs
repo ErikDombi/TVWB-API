@@ -76,34 +76,34 @@ namespace TVWBAPI
                             {
                                 if(lateDifferences > 0 && absentDifferences > 0)
                                 {
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} new absence(s)");
+                                    user.SendNotification("Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} new absence(s)");
                                 }
                                 else if(lateDifferences > 0 && absentDifferences < 0)
                                 {
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
+                                    user.SendNotification("Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} new late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
                                 }
                                 else if(lateDifferences < 0 && absentDifferences > 0)
                                 {
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has had {Math.Abs(lateDifferences)} late(s) removed and {Math.Abs(absentDifferences)} new absence(s)");
+                                    user.SendNotification("Attendance Updated", $"{user.StudentInfo.FirstName} has had {Math.Abs(lateDifferences)} late(s) removed and {Math.Abs(absentDifferences)} new absence(s)");
                                 }
                                 else if(lateDifferences < 0 && absentDifferences < 0)
                                 {
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} removed late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
+                                    user.SendNotification("Attendance Updated", $"{user.StudentInfo.FirstName} has {Math.Abs(lateDifferences)} removed late(s) and {Math.Abs(absentDifferences)} absence(s) has been removed");
                                 }
                             }
                             else
                             {
                                 if(lateDifferences < 0)
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) has been removed from {user.StudentInfo.FirstName}'s attendance.");
+                                    user.SendNotification("Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) has been removed from {user.StudentInfo.FirstName}'s attendance.");
                                 else if(lateDifferences > 0)
-                                    user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) have been added to {user.StudentInfo.FirstName}'s attendance.");
+                                    user.SendNotification("Attendance Updated", $"{Math.Abs(lateDifferences)} Late(s) have been added to {user.StudentInfo.FirstName}'s attendance.");
                             }
                         }else if(absentDifferences != 0)
                         {
                             if (absentDifferences < 0)
-                                user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been removed from {user.StudentInfo.FirstName}'s attendance.");
+                                user.SendNotification("Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been removed from {user.StudentInfo.FirstName}'s attendance.");
                             else if (absentDifferences > 0)
-                                user.SendNotification(notificationHandler, "Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been added to {user.StudentInfo.FirstName}'s attendance.");
+                                user.SendNotification("Attendance Updated", $"{Math.Abs(absentDifferences)} {((Math.Abs(absentDifferences) > 1) ? "Absences have" : "Absent has")} been added to {user.StudentInfo.FirstName}'s attendance.");
                         }
                         // Don't save users before checking if there is a difference between the new & old
                         if (AI.Absences.ToList().Count > 0 || AI.Absents.ToList().Count > 0)

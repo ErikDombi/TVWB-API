@@ -1,6 +1,8 @@
 [
   {
     "Friends": [],
+    "PendingIncomingFriendRequest": [],
+    "PendingOutgoingFriendRequest": [],
     "Username": "domberik176",
     "Password": "torchman",
     "UUID": "c44551e0-c4bd-4abd-b68d-a064b7c0f86b",
@@ -1918,7 +1920,7 @@
       "Absents": "13",
       "Lates": "26",
       "Type": "Source",
-      "CacheDate": "2020-05-20 7:04:52 PM"
+      "CacheDate": "2020-05-22 5:00:08 PM"
     },
     "APNSToken": null,
     "ShareTimetable": false

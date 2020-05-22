@@ -18,21 +18,30 @@ namespace TVWBAPI.Controllers
         }
 
         [Route("/FindUser/ByUUID/")]
-        public IActionResult ByUUID(string UUID)
+        public IActionResult ByUUID(string token, string UUID)
         {
-            return Content(JsonConvert.SerializeObject(users.FirstOrDefault(t => t.UUID.ToString() == UUID).PublicProfile()));
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return Unauthorized();
+            return Content(JsonConvert.SerializeObject(users.FirstOrDefault(t => t.UUID.ToString() == UUID).PublicProfile(user)));
         }
 
         [Route("/FindUser/ByUsername/")]
-        public IActionResult ByUsername(string Username)
+        public IActionResult ByUsername(string token, string Username)
         {
-            return Content(JsonConvert.SerializeObject(users.FirstOrDefault(t => t.Username.ToLower() == Username.ToLower()).PublicProfile()));
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return Unauthorized();
+            return Content(JsonConvert.SerializeObject(users.FirstOrDefault(t => t.Username.ToLower() == Username.ToLower()).PublicProfile(user)));
         }
 
         [Route("/FindUser/Suggestions/")]
-        public IActionResult Suggestions(string Username)
+        public IActionResult Suggestions(string token, string Username)
         {
-            return Content(JsonConvert.SerializeObject(users.Where(t => t.Username.ToLower().Contains(Username)).Select(c => c.PublicProfile())));
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return Unauthorized();
+            return Content(JsonConvert.SerializeObject(users.Where(t => t.Username.ToLower().Contains(Username)).Select(c => c.PublicProfile(user))));
         }
     }
 }
