@@ -41,7 +41,7 @@ namespace TVWBAPI.Controllers
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
             if (user == null)
                 return Unauthorized();
-            return Content(JsonConvert.SerializeObject(users.Where(t => t.Username.ToLower().Contains(Username)).Select(c => c.PublicProfile(user))));
+            return Content(JsonConvert.SerializeObject(users.Where(t => t.Username.ToLower().Contains(Username.ToLower()) || (t.StudentInfo.FirstName.ToLower() + " " + t.StudentInfo.LastName.ToLower()).Contains(Username.ToLower())).Select(c => c.PublicProfile(user))));
         }
 
         [Route("/FindUser/ByToken/")]

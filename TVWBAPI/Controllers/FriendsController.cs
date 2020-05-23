@@ -27,7 +27,7 @@ namespace TVWBAPI.Controllers
             if (fuser == null)
                 return BadRequest();
             user.PendingOutgoingFriendRequest.Add(fuser.UUID.ToString());
-            user.AddUser(user);
+            fuser.AddUser(user);
             return Ok();
         }
 
@@ -36,6 +36,8 @@ namespace TVWBAPI.Controllers
         public IActionResult Get(string token)
         {
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
             return Content(JsonConvert.SerializeObject(user.Friends));
         }
 
@@ -44,7 +46,57 @@ namespace TVWBAPI.Controllers
         public IActionResult GetRequests(string token)
         {
             var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
             return Content(JsonConvert.SerializeObject(user.PendingIncomingFriendRequest));
+        }
+
+        [HttpPost]
+        [Route("/Friends/Remove/")]
+        public IActionResult RemoveFriend(string token, string friend)
+        {
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
+            var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
+            if (fuser == null)
+                return BadRequest();
+            fuser.Friends.Remove(user.UUID.ToString());
+            user.Friends.Remove(fuser.UUID.ToString());
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("/Friends/Request/Accept/")]
+        public IActionResult AcceptRequest(string token, string friend)
+        {
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
+            var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
+            if (fuser == null)
+                return BadRequest();
+            fuser.PendingOutgoingFriendRequest.Remove(user.UUID.ToString());
+            user.PendingIncomingFriendRequest.Remove(fuser.UUID.ToString());
+            fuser.Friends.Add(user.UUID.ToString());
+            user.Friends.Add(fuser.UUID.ToString());
+            fuser.SendNotification("Friend Request Accepted", $"{user.StudentInfo.FirstName} {user.StudentInfo.LastName} accepted your friend request");
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("/Friends/Request/Decline/")]
+        public IActionResult DeclineRequest(string token, string friend)
+        {
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
+            var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
+            if (fuser == null)
+                return BadRequest();
+            fuser.PendingOutgoingFriendRequest.Remove(user.UUID.ToString());
+            user.PendingIncomingFriendRequest.Remove(fuser.UUID.ToString());
+            return Ok();
         }
     }
 }
