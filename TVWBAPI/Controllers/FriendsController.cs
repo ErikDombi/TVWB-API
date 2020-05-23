@@ -76,8 +76,8 @@ namespace TVWBAPI.Controllers
             var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
             if (fuser == null)
                 return BadRequest();
-            fuser.PendingOutgoingFriendRequest.Remove(user.UUID.ToString());
-            user.PendingIncomingFriendRequest.Remove(fuser.UUID.ToString());
+            fuser.PendingIncomingFriendRequest.Remove(user.UUID.ToString());
+            user.PendingOutgoingFriendRequest.Remove(fuser.UUID.ToString());
             fuser.Friends.Add(user.UUID.ToString());
             user.Friends.Add(fuser.UUID.ToString());
             fuser.SendNotification("Friend Request Accepted", $"{user.StudentInfo.FirstName} {user.StudentInfo.LastName} accepted your friend request");
@@ -96,6 +96,21 @@ namespace TVWBAPI.Controllers
                 return BadRequest();
             fuser.PendingOutgoingFriendRequest.Remove(user.UUID.ToString());
             user.PendingIncomingFriendRequest.Remove(fuser.UUID.ToString());
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("/Friends/Request/Cancel/")]
+        public IActionResult CancelRequest(string token, string friend)
+        {
+            var user = users.FirstOrDefault(t => t.Tokens.Select(c => c.token).Any(c => c == token));
+            if (user == null)
+                return BadRequest();
+            var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
+            if (fuser == null)
+                return BadRequest();
+            user.PendingOutgoingFriendRequest.Remove(fuser.UUID.ToString());
+            fuser.PendingIncomingFriendRequest.Remove(user.UUID.ToString());
             return Ok();
         }
     }
