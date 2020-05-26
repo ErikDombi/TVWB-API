@@ -26,8 +26,10 @@ namespace TVWBAPI.Controllers
             var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
             if (fuser == null)
                 return BadRequest();
-            user.PendingOutgoingFriendRequest.Add(fuser.UUID.ToString());
-            fuser.AddUser(user);
+            if(!user.PendingOutgoingFriendRequest.Contains(fuser.UUID.ToString()))
+                user.PendingOutgoingFriendRequest.Add(fuser.UUID.ToString());
+            if (!fuser.PendingIncomingFriendRequest.Contains(user.UUID.ToString()))
+                fuser.AddUser(user);
             return Ok();
         }
 
@@ -76,8 +78,8 @@ namespace TVWBAPI.Controllers
             var fuser = users.FirstOrDefault(t => t.UUID.ToString().ToLower() == friend);
             if (fuser == null)
                 return BadRequest();
-            fuser.PendingIncomingFriendRequest.Remove(user.UUID.ToString());
-            user.PendingOutgoingFriendRequest.Remove(fuser.UUID.ToString());
+            fuser.PendingOutgoingFriendRequest.Remove(user.UUID.ToString());
+            user.PendingIncomingFriendRequest.Remove(fuser.UUID.ToString());
             fuser.Friends.Add(user.UUID.ToString());
             user.Friends.Add(fuser.UUID.ToString());
             fuser.SendNotification("Friend Request Accepted", $"{user.StudentInfo.FirstName} {user.StudentInfo.LastName} accepted your friend request");
