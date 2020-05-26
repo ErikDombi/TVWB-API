@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {}
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {}
   },
   "projects": {
-    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {
+    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
+        "projectUniqueName": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
         "projectName": "TVWBAPI",
-        "projectPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
-        "packagesPath": "/Users/erikdombi/.nuget/packages/",
-        "outputPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/obj/",
+        "projectPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+        "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
+        "outputPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/erikdombi/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Erik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -100,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
