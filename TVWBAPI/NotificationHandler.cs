@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.OpenSsl;
 using PushSharp.Apple;
 using RestSharp;
 using RestSharp.Authenticators;

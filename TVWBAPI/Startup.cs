@@ -30,7 +30,7 @@ namespace TVWBAPI
         {
             services.AddSingleton(new UserManager());
             services.AddSingleton(new Authentication());
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddRazorPages();
             GlobalConfiguration.Configuration.UseSQLiteStorage("TVWBAPI.db");
             services.AddHangfire(x => x.UseSimpleAssemblyNameTypeSerializer().UseRecommendedSerializerSettings().UseSQLiteStorage("TVWBAPI.db"));
             services.AddHangfireServer();
@@ -69,9 +69,10 @@ namespace TVWBAPI
                 app.UseDeveloperExceptionPage();
             }
             app.UseHangfireDashboard();
-            app.UseMvc(r =>
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
             {
-                r.MapRouteAnalyzer("/routes");
+                endpoints.MapRazorPages();
             });
             //RecurringJob.AddOrUpdate(() => TimetableUpdaterTask.Update(NH), Cron.Daily);
             RecurringJob.AddOrUpdate(() => AUT.Update(), Cron.Hourly);

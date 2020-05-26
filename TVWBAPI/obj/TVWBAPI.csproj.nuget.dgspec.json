@@ -1,35 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {}
+    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {}
   },
   "projects": {
-    "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj": {
+    "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
+        "projectUniqueName": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
         "projectName": "TVWBAPI",
-        "projectPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\TVWBAPI.csproj",
-        "packagesPath": "C:\\Users\\Erik\\.nuget\\packages\\",
-        "outputPath": "D:\\Windows.old.001.bak\\Users\\Erik\\source\\repos\\TVWBAPI\\TVWBAPI\\obj\\",
+        "projectPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/TVWBAPI.csproj",
+        "packagesPath": "/Users/erikdombi/.nuget/packages/",
+        "outputPath": "/Users/erikdombi/Documents/TVWB-API/TVWBAPI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Erik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/erikdombi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -40,7 +34,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp3.1": {
           "dependencies": {
             "AspNetCore.RouteAnalyzer": {
               "target": "Package",
@@ -48,40 +42,28 @@
             },
             "HangFire": {
               "target": "Package",
-              "version": "[1.7.7, )"
+              "version": "[1.7.11, )"
             },
             "Hangfire.Storage.SQLite": {
               "target": "Package",
-              "version": "[0.1.0, )"
+              "version": "[0.2.4, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",
-              "version": "[1.11.8, )"
-            },
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.1, )",
-              "autoReferenced": true
+              "version": "[1.11.23, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.2, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
+              "version": "[2.2.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.1.10, )"
+              "version": "[3.1.3, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[12.0.2, )"
+              "version": "[12.0.3, )"
             },
             "PushSharp": {
               "target": "Package",
@@ -93,7 +75,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.5.1, )"
+              "version": "[6.6.0, )"
             },
             "jose-jwt": {
               "target": "Package",
@@ -110,7 +92,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }
